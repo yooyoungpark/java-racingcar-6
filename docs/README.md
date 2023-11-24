@@ -1,8 +1,8 @@
 # 자바 자동차 경주 게임
 
 ## 🚙 기능 명세
-- [ ] 자동차 경주에 참여 할 n대의 자동차 이름을 입력한다 -InputView#inputCarName()
-    - [ ] 자동차 이름은 쉼표(,)를 기준으로 구분하며 이름은 5자 이하만 가능하다.
+- [x] 자동차 경주에 참여 할 n대의 자동차 이름을 입력한다 -InputView#inputCarName()
+    - [x] 자동차 이름은 쉼표(,)를 기준으로 구분하며 이름은 5자 이하만 가능하다.
 - [ ] 사용자는 시도할 횟수를 입력한다. -InputView#inputGameCount()
 - [ ] 0에서 9 사이에서 무작위 값을 생성한다. -NumberGenerator#createRandomNumbers()
     - [ ]무작위 값이 4 이상일 경우에만 전진한다. -MoveOrStop#moveOneStep()
