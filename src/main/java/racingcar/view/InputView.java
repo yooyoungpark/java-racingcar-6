@@ -20,10 +20,14 @@ public class InputView {
 
     public static int inputGameCount() {
         System.out.println("시도할 회수는 몇회인가요?");
-        int inputNum = Integer.parseInt(Console.readLine());
-        if (inputNum <= 0){
-            throw new IllegalArgumentException("1이상의 수를 입력하세요.");
+        try {
+            int inputNum = Integer.parseInt(Console.readLine());
+            if (inputNum <= 0) {
+                throw new IllegalArgumentException("1이상의 수를 입력하세요.");
+            }
+            return inputNum;
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("숫자를 입력하세요.");
         }
-        return inputNum;
     }
 }
