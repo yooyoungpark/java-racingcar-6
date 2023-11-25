@@ -8,14 +8,14 @@ public class OutputView {
         System.out.println("\n실행 결과");
     }
 
-    public static void printCarScore(List<String> carNames, List<Integer> randomNumbers) {
-        for (int j = 0; j < carNames.size(); j++) {
-            System.out.println(carNames.get(j) + " : " + randomNumbers.get(j));
+    public static void printCarScore(List<String> carNames, List<String> scores) {
+        for (int i = 0; i < carNames.size(); i++) {
+            System.out.println(carNames.get(i) + " : " + scores.get(i));
         }
         System.out.println();
     }
 
-    public static String printWinner(String carname) {
-        return "최종 우승자 : " + carname;
+    public static String printWinner(List<String> carNames, int MaxScore) {
+        return "최종 우승자 : ";
     }
 }

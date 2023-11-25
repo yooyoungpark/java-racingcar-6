@@ -11,10 +11,12 @@ public class Application {
         List<String> carNames = InputView.inputCarName();
         int gameCount = InputView.inputGameCount();
         NumberGenerator numberGenerator = new NumberGenerator();
+        MoveOrStop moveOrStop = new MoveOrStop();
         OutputView.printResult();
         for (int i = 0; i < gameCount; i++) {
-            List<Integer> randomNumbers = numberGenerator.createRandomNumbers(carNames);
-            OutputView.printCarScore(carNames, randomNumbers);
+            //List<Integer> randomNumbers = numberGenerator.createRandomNumbers(carNames);
+            List<String> scores = moveOrStop.moveOneStep(carNames);
+            OutputView.printCarScore(carNames, scores);
         }
     }
 }
