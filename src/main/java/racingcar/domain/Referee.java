@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Referee {
 
-    int max;
     public Referee() {
     }
 
@@ -22,11 +21,10 @@ public class Referee {
     public List<String> selectWinners(List<String> carNames, int[] scores, int max) {
         List<String> winners = new ArrayList<>();
         for (int i = 0; i < scores.length; i++) {
-            if (scores[i] == max){
+            if (scores[i] == max) {
                 winners.add(carNames.get(i));
             }
         }
         return winners;
     }
-
 }
