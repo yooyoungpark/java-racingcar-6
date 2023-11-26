@@ -8,12 +8,16 @@ public class NumberGenerator {
     public NumberGenerator() {
     }
 
-    public List<Integer> createRandomNumbers(List<String> cars) {
-        List<Integer> randomNumbers = new ArrayList<>();
+    public int[] createScores(List<String> cars, int[]scores) {
+        //List<Integer> randomNumbers = new ArrayList<>();
         for (int i = 0; i < cars.size(); i++) {
-            int number = Randoms.pickNumberInRange(0, 9);
-            randomNumbers.add(number);
+            int randomNumber = Randoms.pickNumberInRange(0, 9);
+            if (randomNumber >= 4) {
+                scores[i]++;
+            }
+            //randomNumbers.add(number);
         }
-        return randomNumbers;
+        return scores;
+        //return randomNumbers;
     }
 }
