@@ -1,7 +1,6 @@
 package racingcar.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
-import java.util.ArrayList;
 import java.util.List;
 
 public class NumberGenerator {
@@ -12,16 +11,16 @@ public class NumberGenerator {
     public NumberGenerator() {
     }
 
-    public int[] createScores(List<String> cars, int[] scores) {
-        //List<Integer> randomNumbers = new ArrayList<>();
+    public void createScores(List<String> cars, List<Integer> scores) {
+        System.out.println("이전 점수 : " + scores);
         for (int i = 0; i < cars.size(); i++) {
             int randomNumber = Randoms.pickNumberInRange(randomNumber_range_min, randomNumber_range_max);
             if (randomNumber >= getScore) {
-                scores[i]++;
+                int score = scores.get(i);
+                scores.remove(i);
+                scores.add(i, score + 1);
             }
-            //randomNumbers.add(number);
         }
-        return scores;
-        //return randomNumbers;
+        System.out.println("바뀐 점수 : " + scores);
     }
 }
